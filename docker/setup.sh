@@ -1,10 +1,10 @@
 ###Temp url
 
 #Run below command as root
-# curl -sS https://raw.githubusercontent.com/akalaj/djangoSpot/master/djangoDocker/setup.sh | sudo bash
+# curl -sS https://raw.githubusercontent.com/akalaj/djangoSpot/master/docker/setup.sh
 
 ###Install dependencies
-yum install vim git -y
+yum install vim git yum-utils -y
 
 ####Install docker
 
@@ -18,7 +18,8 @@ yum install docker-ce -y
 echo -e "Installing docker-compose"
 curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-chmod 775 /usr/local/bin/docker-compose
+chmod 777 /usr/local/bin/docker-compose
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 ###Retrieve files
 
