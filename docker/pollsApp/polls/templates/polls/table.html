@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+
+<center>
+	<h1>Table Example</h1>
+	<p>Pizza Result Scores</p>
+
+<table>
+	{% for key, value in htmlTable %}
+		<tr>
+			<th>{{ key }}</th>
+			<th>{{ value }}</th>
+		</tr>
+	{% endfor %}
+</table>	
+<p>test2</p>
+</center>
+
+</body>
+</html>
